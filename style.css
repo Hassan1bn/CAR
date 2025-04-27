@@ -1,0 +1,756 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f1f3f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ddd;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00a8ff;
+}
+
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1619021297590-19624ff2d2c4?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+}
+
+
+.cars-container {
+    padding: 50px 20px;
+    background: #fff;
+}
+.contact-section .cars-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cars {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+}
+
+.car {
+    flex-shrink: 0;
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    scroll-snap-align: start;
+}
+
+.car:hover {
+    transform: translateY(-10px);
+}
+
+.car img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 5px;
+    color: #2c3e50;
+}
+
+.car p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.car button {
+    background: #00a8ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.car button:hover {
+    background: #007acc;
+}
+
+
+.social-media {
+    text-align: center;
+    padding: 40px 20px;
+    background: #2c3e50;
+    color: white;
+}
+
+.social-media h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 2rem;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00a8ff;
+    transform: scale(1.2);
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+footer a {
+    color: #00a8ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.main-header {
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e74c3c;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 10px;
+}
+
+.navigation a {
+    margin: 0 15px;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #e74c3c;
+}
+
+.quote-button .btn-quote {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.quote-button .btn-quote:hover {
+    background-color: #c0392b;
+}
+.contact-section h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    animation: fadeInDown 1s ease-out;
+}
+
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #502c2c;
+}
+
+.contact-section p {
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contact-form {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form button {
+    background: #e74c3c;
+    color: white;
+    padding: 15px;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #c0392b;
+}
+
+.contact-info {
+    flex: 1 1 300px;
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.contact-info i {
+    color: #e74c3c;
+    margin-right: 10px;
+}
+
+.contact-section h2 {
+    font-size: 3rem;
+    color: #e74c3c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: slideFadeIn 1s ease forwards;
+}
+
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.contact-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.about-section {
+    padding: 80px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.about-section .intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.project-details {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-details h3 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #e74c3c;
+}
+
+.project-details p, .project-details ul {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.project-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-details ul li {
+    margin: 10px 0;
+}
+
+.project-details ul li i {
+    color: #e74c3c;
+    margin-right: 10px;
+}
+.services-section {
+    padding: 80px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.services-section .intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item i {
+    font-size: 40px;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+.services-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #666;
+}
+.cars-section {
+    padding: 80px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.cars-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.cars-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.car-card {
+    min-width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.car-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.car-card h3 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.car-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.car-card .price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+.btn-buy {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #c0392b;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main-header {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.navigation a {
+    margin: 0 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navigation .active {
+    color: #e74c3c;
+}
+
+.social-icons a {
+    color: #333;
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.hero-banner {
+    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+    padding: 120px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-main {
+    background: #e74c3c;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.cars-section {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.cars-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.car-card {
+    background: #fafafa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+}
+
+.car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.car-card h3 {
+    margin: 15px 0 10px;
+}
+
+.car-card p {
+    font-size: 1.1rem;
+    color: #e74c3c;
+}
+
+.btn-buy {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 30px;
+}
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #2c3e50; 
+}
+
+
+.intro-text, .hero-banner p, .services-section p, .cars-section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    color: #555;
+}.cars-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .car-card {
+    flex: 0 0 calc(33.333% - 20px); /* كل سيارة تأخذ ثلث عرض السطر مع مسافة */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    margin-bottom: 30px;
+  }
+  
+  /* حركة خفيفة للسيارة عند المرور عليها */
+  .car-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  @media (max-width: 768px) {
+    .cars-container {
+      grid-template-columns: repeat(2, 1fr); /* شاشتين في صف للموبايل والتابلت */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cars-container {
+      grid-template-columns: 1fr; /* سيارة واحدة في الصف للموبايل الصغير */
+    }
+  }
+  /* Modal overlay */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Hide modal initially */
+  .hidden {
+    display: none;
+  }
+  
+  /* Modal content box */
+  .modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.5s;
+  }
+  
+  /* Close button */
+  #close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #e74c3c;
+  }
+  
+  /* Modal fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.7); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  /* Modal texts */
+  .modal-content h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .modal-content p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
